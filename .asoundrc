@@ -1,0 +1,75 @@
+# fréquence d'échantillonnage
+defaults.pcm.dmix.!rate 44100
+
+# algorithme de re-échantillonnage
+#defaults.pcm.!rate_converter "samplerate_best"
+
+# Audio via bluetooth
+#pcm.bluetooth {
+#	type bluetooth
+#	device 10:43:69:91:A9:A5
+#}
+pcm.btheadset {
+   type plug
+   slave {
+       pcm {
+           type bluetooth
+           device 10:43:69:91:A9:A5
+           profile "auto"
+       }
+   }
+   hint {
+       show on
+       description "BT Headset"
+   }
+}
+ctl.btheadset {
+  type bluetooth
+}
+
+# JACK2 (alsa tunnel for firefox)
+
+#pcm.!default {
+#    type plug
+#	slave {
+#		pcm "jack"
+#	}
+#}
+
+pcm.jack {
+	type jack
+	playback_ports {
+		0 system:playback_1
+		1 system:playback_2
+	}
+	capture_ports {
+		0 system:capture_1
+		1 system:capture_2
+	}
+}
+
+# equalizer
+
+ctl.equal {
+    type equal;
+}
+
+pcm.plugequal {
+    type equal;
+    # Modify the line below if you do not
+    # want to use sound card 0.
+    #slave.pcm "plughw:0,0";
+    # by default we want to play from more sources at time:
+    slave.pcm "plug:dmix";
+}
+
+pcm.equal {
+# If you do not want the equalizer to be your
+# default soundcard comment the following
+# line and uncomment the above line. (You can
+# choose it as the output device by addressing
+# it with specific apps,eg mpg123 -a equal 06.Back_In_Black.mp3)
+#pcm.!default {
+    type plug;
+    slave.pcm plugequal;
+}
