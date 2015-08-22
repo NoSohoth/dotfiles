@@ -17,9 +17,9 @@ URxvt*scrollBar:                      	false
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-! URxvt*transparent:                    boolean
+URxvt*transparent:                      true
 ! URxvt*tintColor:                      color
-! URxvt*shading:                        number
+URxvt*shading:                          30
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -67,15 +67,16 @@ URxvt*foreground:                     	white
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-! URxvt*font: 							xft:Source\ Code\ Pro\ Medium:pixelsize=11:antialias=true:hinting=true
+URxvt*font: 							6x13
 ! URxvt*font:							xft:Gohufont:style=Medium:pixelsize=12:antialias=true:hinting=true
 ! URxvt*font:							xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
- URxvt*font:							xft:Inconsolata:style=Medium:pixelsize=12:antialias=true:hinting=true
+! URxvt*font:							xft:Inconsolata:style=Medium:pixelsize=12:antialias=true:hinting=true
 ! URxvt*font:							xft:Consolas:style=medium:pixelsize=12:antialias=true:hinting=true
- URxvt*boldFont:						xft:DejaVu Sans Mono:style=Bold:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont:                         6x13bold
+! URxvt*boldFont:						xft:DejaVu Sans Mono:style=Bold:pixelsize=12:antialias=true:hinting=true
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
-! URxvt*intensityStyles:                boolean
+! URxvt*intensityStyles:                  false
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style
 ! URxvt*imLocale:                       string
@@ -142,5 +143,5 @@ URxvt.keysym.Shift-Control-C:			perl:clipboard:copy
 URxvt.keysym.Shift-Control-V:			perl:clipboard:paste
 URxvt.keysym.C-Up:						perl:font-size:increase
 URxvt.keysym.C-Down:					perl:font-size:decrease
-URxvt.keysym.C-S-Up:					perl:font-size:incglobal
-URxvt.keysym.C-S-Down:					perl:font-size:decglobal
+! URxvt.keysym.C-S-Up:					perl:font-size:incglobal
+! URxvt.keysym.C-S-Down:					perl:font-size:decglobal

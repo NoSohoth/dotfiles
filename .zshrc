@@ -59,6 +59,19 @@ then
 	bindkey  "^[[6~"  history-beginning-search-forward
 fi
 
+# Ctrl-Z to pause and unpause a command
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 #------------------------------
 # Aliases
 #------------------------------
@@ -75,7 +88,6 @@ alias music='sshfs pierre@10.5.34.1:/home/music /mnt/music'
 alias splitFLAC='cuebreakpoints *.cue | shnsplit -o flac -t "%t" *.flac'
 alias jack2='jackd -R -P70 -dalsa -r48000 -p256 -n2 &'
 alias ncmpcppJACK='jack2; killall mpd; mpd ~/.config/mpd/mpdJACK.conf &; sleep 1; clear; ncmpcpp; killall jackd; killall mpd; alsactl init; mpd &'
-alias ytmp3='youtube-dl -x --audio-format mp3 --audio-quality 0'
 #####ENIB
 alias enib='sftp -oPort=55555 p2puech@sftp.enib.fr'
 alias wenib='sftp -oPort=55555 p2puech@sftp-w.enib.fr'
@@ -87,6 +99,7 @@ alias mineDRK='/home/maelstrom/Cryptocurrencies/cpuminer/cpuminer-multi/minerd -
 #####VPN
 alias openvpnSK='sudo openvpn /etc/openvpn/securityKiss.conf'
 alias openvpnVB='sudo openvpn /etc/openvpn/VPNBook.conf'
+alias openvpnVG='sudo openvpn /etc/openvpn/VPNGate.ovpn'
 #####WINE
 alias ltspice='WINEPREFIX=~/.wine wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LTC/LTspiceIV/scad3.exe'
 alias bl2='optirun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Borderlands\ 2/Binaries/Win32/Borderlands2.exe'

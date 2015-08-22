@@ -11,6 +11,7 @@ set guitablabel=%-.>-t
 
 set number
 set scrolloff=10
+set cursorline
 
 " -- Search
 
@@ -33,11 +34,14 @@ set nowrap
 set autoread
 filetype on
 
-" -- Color
+" -- Theme
 
 set t_Co=256
+
 syntax enable
-colorscheme vitamins
+"set background=dark
+colorscheme monokai
+let g:monokai_italic = 1
 
 " -- Autocmd
 

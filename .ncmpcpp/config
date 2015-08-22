@@ -59,7 +59,7 @@ mpd_music_dir = "/home/maelstrom/Music"
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
 #
-visualizer_in_stereo = "yes"
+visualizer_in_stereo = "no"
 #
 visualizer_fifo_path = "/tmp/mpd.fifo"
 #
@@ -71,7 +71,7 @@ visualizer_fifo_path = "/tmp/mpd.fifo"
 ## are some problems with it.
 ##
 #
-visualizer_output_name = "My FIFO"
+visualizer_output_name = "my_fifo"
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp
@@ -91,6 +91,10 @@ visualizer_sync_interval = "10"
 visualizer_type = "spectrum" #(spectrum/wave)
 #
 visualizer_look = "◆│"
+
+
+
+
 #
 ##### system encoding #####
 ##

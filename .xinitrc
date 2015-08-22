@@ -4,11 +4,11 @@
 
 #xrandr
 
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
+#BUMBLEBEE  xrandr --setprovideroutputsource modesetting NVIDIA-0
+#BUMBLEBEE  xrandr --auto
 
 #Wallpaper
-eval `cat /home/maelstrom/.fehbg`
+sh ~/.fehbg &
 
 #Set fr keyboard
 setxkbmap fr
@@ -16,7 +16,7 @@ setxkbmap fr
 #Numlock ON
 numlockx
 
-#Making eyes happy
+#Make eyes happy
 redshift &
 
 #Music
