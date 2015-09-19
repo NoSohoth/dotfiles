@@ -16,8 +16,8 @@ setxkbmap fr
 #Numlock ON
 numlockx
 
-#Make eyes happy
 redshift &
+#Yay my eyes are happy now :)
 
 #Music
 #jackd -R -P70 -dalsa -r48000 -p256 -n2 &

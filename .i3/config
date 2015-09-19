@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command py3status -c ~/.i3/i3status.conf
+    status_command i3status -c /home/maelstrom/.i3/i3status.conf
 	position top
 	font pango:fixed 8
     colors {
@@ -189,11 +189,11 @@ new_window 1pixel
 
 ##### Key bindings #####
 
-bindcode 248 exec /home/maelstrom/bin/lock
-bindsym XF86KbdBrightnessDown exec /home/maelstrom/bin/kbd_backlight down
-bindsym XF86KbdBrightnessUp exec /home/maelstrom/bin/kbd_backlight up
-#bindsym $mod+F5 exec /home/maelstrom/bin/scr_backlight down
-#bindsym $mod+F6 exec /home/maelstrom/bin/scr_backlight up
+bindcode 248 exec /usr/local/bin/lock
+bindsym XF86KbdBrightnessDown exec /usr/local/bin/kbd_backlight down
+bindsym XF86KbdBrightnessUp exec /usr/local/bin/kbd_backlight up
+#bindsym $mod+F5 exec /usr/local/bin/scr_backlight down
+#bindsym $mod+F6 exec /usr/local/bin/scr_backlight up
 bindsym $mod+F8 exec redshift
 bindsym $mod+F9 exec killall redshift && redshift -x
 bindsym XF86AudioMute exec amixer -q set Master toggle

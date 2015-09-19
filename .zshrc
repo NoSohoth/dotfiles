@@ -23,7 +23,6 @@ SAVEHIST=1000
 #------------------------------
 # Variables
 #------------------------------
-export PATH=~/bin:$PATH
 export TERM=rxvt-unicode-256color
 export BROWSER="firefox"
 export EDITOR="vim"
@@ -75,40 +74,6 @@ bindkey '^Z' fancy-ctrl-z
 #------------------------------
 # Aliases
 #------------------------------
-alias ls='ls --color -F'
-alias ll='ls --color -alhF'
-alias grep='grep --color=always'
-alias temp='watch -n 1 nvidia-smi'
-alias rezid='ssh stranger@rezid.org -L 4004:10.5.30.2:22'
-alias mplayerHDMI='DISPLAY=:0.1 optirun mplayer -fs'
-alias getWWW='wget -r -k -E -np'
-alias tf2='SteamAppId=440 vblank_mode=0 optirun .local/share/Steam/SteamApps/common/Team\ Fortress\ 2/hl2.sh -steam -console -game tf -novid'
-#####AUDIO
-alias music='sshfs pierre@10.5.34.1:/home/music /mnt/music'
-alias splitFLAC='cuebreakpoints *.cue | shnsplit -o flac -t "%t" *.flac'
-alias jack2='jackd -R -P70 -dalsa -r48000 -p256 -n2 &'
-alias ncmpcppJACK='jack2; killall mpd; mpd ~/.config/mpd/mpdJACK.conf &; sleep 1; clear; ncmpcpp; killall jackd; killall mpd; alsactl init; mpd &'
-#####ENIB
-alias enib='sftp -oPort=55555 p2puech@sftp.enib.fr'
-alias wenib='sftp -oPort=55555 p2puech@sftp-w.enib.fr'
-alias punset='unset http_proxy https_proxy ftp_proxy no_proxy'
-#####CRYPTOMINING
-alias mineCOYE='optirun cudaminer -o stratum+tcp://givemecoye.com:3307 -u Maelstr0m.1 -p 1 -l F8x4 -i 0 -C 2 -H 1'
-alias mineDOGE='optirun cudaminer -o stratum+tcp://stratum.doge.hashfaster.com:3339 -u Maelstr0m.1 -p 1 -l F8x4 -i 0 -C 2 -H 1'
-alias mineDRK='/home/maelstrom/Cryptocurrencies/cpuminer/cpuminer-multi/minerd -a x11 -o stratum+tcp://stratum.simpledrk.com:3353 -u XsxTonGPPjagaUmBLxaovjjPhiMyG2taaJ.1 -p 1'
-#####VPN
-alias openvpnSK='sudo openvpn /etc/openvpn/securityKiss.conf'
-alias openvpnVB='sudo openvpn /etc/openvpn/VPNBook.conf'
-alias openvpnVG='sudo openvpn /etc/openvpn/VPNGate.ovpn'
-#####WINE
-alias ltspice='WINEPREFIX=~/.wine wine ~/.wine/drive_c/Program\ Files\ \(x86\)/LTC/LTspiceIV/scad3.exe'
-alias bl2='optirun wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Borderlands\ 2/Binaries/Win32/Borderlands2.exe'
-alias catia20='WINEPREFIX=~/.wine-catia wine ~/.wine-catia/drive_c/Program\ Files/Dassault\ Systemes/B20/win_b64/code/bin/CNEXT.exe'
-alias catia19='WINEPREFIX=~/.wine-catiaV5R19 WINEARCH=win32 wine ~/.wine-catiaV5R19/drive_c/Program\ Files/Dassault\ Systemes/B19/intel_a/code/bin/CNEXT.exe'
-alias hw2='cd ~/.wine-hw2/dosdevices/c:/Program\ Files/Sierra/Homeworld2/Bin/Release && WINEPREFIX=~/.wine-hw2 optirun wine ~/.wine-hw2/drive_c/Program\ Files/Sierra/Homeworld2/Bin/Release/Homeworld2.exe -w 1920 -h 1080 -fullscreen -novideoerrors -d36'
-alias photoshop='WINEARCH=win32 WINEPREFIX=~/.wine-ps wine ~/.wine-ps/drive_c/Program\ Files/Adobe/Adobe\ Photoshop\ CS6/Photoshop.exe'
-alias fallout3='WINEPREFIX=~/.wine-fallout3 wine ~/.wine-fallout3/drive_c/Program\ Files\ \(x86\)/Bethesda\ Softworks/Fallout\ 3/FalloutLauncher.exe'
-#####
 source ~/.zsh_aliases
 
 #------------------------------
