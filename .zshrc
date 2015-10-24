@@ -23,6 +23,9 @@ SAVEHIST=1000
 #------------------------------
 # Variables
 #------------------------------
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 export TERM=rxvt-unicode-256color
 export BROWSER="firefox"
 export EDITOR="vim"
@@ -108,4 +111,4 @@ zstyle :compinstall filename '/home/maelstrom/.zshrc'
 #------------------------------
 # LS_COLORS
 #------------------------------
-eval $( dircolors -b /home/maelstrom/Git/LS_COLORS/LS_COLORS )
+eval $( dircolors -b /home/maelstrom/Git/zsh/LS_COLORS/LS_COLORS )

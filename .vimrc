@@ -1,11 +1,14 @@
-set nocompatible
 set encoding=utf-8
+set guitablabel=%-.>-t
+set nocompatible
 set noswf
 set nowritebackup
+set showcmd
+set showmatch           " highlight matching [{()}]
+set tabpagemax=64
 set undofile
 set undodir=/home/maelstrom/.vim/vimundo
-set tabpagemax=64
-set guitablabel=%-.>-t
+set wildmenu            " visual autocomplete for command menu
 
 " -- GUI Display modifications
 
@@ -42,6 +45,7 @@ syntax enable
 "set background=dark
 colorscheme monokai
 let g:monokai_italic = 1
+let g:rehash256 = 1
 
 " -- Autocmd
 
@@ -50,11 +54,11 @@ let g:monokai_italic = 1
 
 autocmd BufEnter *.py,*.c,*.h,*.cpp,*.hpp,*.java set colorcolumn=80
 
-" -- YCM
-
-let g:ycm_global_ycm_extra_conf = '/home/maelstrom/.ycm_extra_conf.py'
-
 " -- Key Mapping
 
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
+
+" -- Add-Ons
+
+let g:ycm_global_ycm_extra_conf = '/home/maelstrom/.ycm_extra_conf.py'

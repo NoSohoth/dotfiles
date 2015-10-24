@@ -7,6 +7,9 @@ flags = [
 '-I', '/usr/include/SFML',
 '-I', '/usr/include/GL',
 '-I', '/usr/include/glm',
+'-I', '/usr/include/qt4'
+'-lQtGui', '-lQtCore',
+'-L', '/usr/lib'
 ]
 
 def FlagsForFile( filename ):

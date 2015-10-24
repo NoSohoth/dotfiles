@@ -186,14 +186,14 @@ focus_follows_mouse no
 workspace_auto_back_and_forth no
 new_window 1pixel
 
-
 ##### Key bindings #####
 
 bindcode 248 exec /usr/local/bin/lock
 bindsym XF86KbdBrightnessDown exec /usr/local/bin/kbd_backlight down
 bindsym XF86KbdBrightnessUp exec /usr/local/bin/kbd_backlight up
-#bindsym $mod+F5 exec /usr/local/bin/scr_backlight down
-#bindsym $mod+F6 exec /usr/local/bin/scr_backlight up
+bindsym $mod+F5 exec /usr/local/bin/scr_backlight down
+bindsym $mod+F6 exec /usr/local/bin/scr_backlight up
+bindsym $mod+F7 exec /usr/local/bin/scr_backlight toggle
 bindsym $mod+F8 exec redshift
 bindsym $mod+F9 exec killall redshift && redshift -x
 bindsym XF86AudioMute exec amixer -q set Master toggle
@@ -206,5 +206,6 @@ bindsym XF86AudioStop exec mpc stop
 #bindsym XF86Standby
 #bindsym XF86Calculator
 #bindsym XF86Webcam
-
 bindsym Print exec scrot
+
+# vim:filetype=i3
