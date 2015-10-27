@@ -1,6 +1,6 @@
 #URxvt
 
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
 
 #xrandr
 
