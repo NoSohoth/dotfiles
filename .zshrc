@@ -7,7 +7,7 @@
 #------------------------------
 #Must be at the beginning of the file, otherwise the keybindings won't work
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="sporty_256"
+ZSH_THEME="sunaku"
 plugins=(adb git)
 source $ZSH/oh-my-zsh.sh
 
