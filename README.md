@@ -1,4 +1,4 @@
-## dotfiles
+# dotfiles
 What I use:
 * Linux distribution : [Arch Linux](https://www.archlinux.org/ "Arch Linux")
 * Tiling window manager : [i3-wm](https://i3wm.org/ "i3-wm")
@@ -7,5 +7,5 @@ What I use:
 * Media player : [mplayer](https://mplayerhq.hu/ "MPlayer")
 * Display dimmer : [redshift](https://en.wikipedia.org/wiki/Redshift_(software) "redshift")
 
-# Screenshot
+## Screenshot
 ![Almost there :) Unless the image cannot be retrieved properly :/](https://i.imgur.com/NVPL2Vq.png)
