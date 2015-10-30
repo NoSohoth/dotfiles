@@ -12,6 +12,7 @@ set wildmenu            " visual autocomplete for command menu
 
 " -- GUI Display modifications
 
+set number
 set relativenumber
 set scrolloff=10
 set cursorline

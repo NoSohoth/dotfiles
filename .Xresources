@@ -71,7 +71,7 @@ URxvt*urgentOnBell:                   	true
 ! URxvt*borderColor:                    color
 
 URxvt*background:       #170F0D
-URxvt*foreground:       #746C48
+URxvt*foreground:       #CCCCCC
 URxvt*cursorColor:      #6666CC
 URxvt*colorBD:          #C8B984
 
@@ -144,7 +144,7 @@ URxvt*boldFont:                         6x13bold
 ! URxvt*secondaryScroll:                boolean
 ! URxvt*perl-lib:                       string
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:                	default,matcher,clipboard,font-size
+URxvt*perl-ext-common:                	default,matcher,vtwheel,clipboard
 ! URxvt*perl-ext:                       string
 URxvt*iso14755:                       	false
 URxvt*iso14755_52:						false
@@ -181,5 +181,3 @@ URxvt.keysym.Shift-Control-V:			perl:clipboard:paste
 URxvt.keysym.C-Up:						font-size:increase
 URxvt.keysym.C-Down:					font-size:decrease
 URxvt.keysym.C-KP_0:                    font-size:reset
-! URxvt.keysym.C-S-Up:					perl:font-size:incglobal
-! URxvt.keysym.C-S-Down:					perl:font-size:decglobal
