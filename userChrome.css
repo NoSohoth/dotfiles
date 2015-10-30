@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------------------------------*
+ * File: .mozilla/firefox/<profile-directory>/chrome/userChrome.css (customize firefox) *
+ *--------------------------------------------------------------------------------------*/
+
+/* Tab font */
+window {
+  font-size: 3mm !important;
+  font-family: fixed !important;
+}
+
+/* Tab bar height */
+#TabsToolbar {
+    height:20px !important;
+    margin-top:0px !important;
+    margin-bottom:-1px !important;
+}
+#tabbrowser-tabs {
+    height:20px !important;
+    min-height:20px !important;
+}
+.tab-background-start[selected=true]::after,
+.tab-background-start[selected=true]::before,
+.tab-background-start,
+.tab-background-end,
+.tab-background-end[selected=true]::after,
+.tab-background-end[selected=true]::before {
+    min-height:20px!important;
+}
+
+/* URL bar, search bar and back button height */
+#urlbar-container,#search-container {
+    margin-top:-1px !important;
+    margin-bottom:0px !important;
+}
+#urlbar-container #back-button {
+    margin-top:0px !important;
+    margin-bottom:0px !important
+}
+#urlbar-container #back-button image {
+    padding:3px 3px !important
+}
+
+/* Nav bar height */
+/* Note: the nav bar contains the URL bar, search bar, etc ... */
+#nav-bar {
+    height: 33px !important;
+}
+
+/* Single line text fields */
+input {
+  font-family: clean !important;
+  font-size: 13px !important;
+}
+
+/* Multi-line textareas */
+/*  textarea {
+ *  }
+*/
