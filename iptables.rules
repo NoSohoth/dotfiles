@@ -48,7 +48,7 @@
 -A TCP -p tcp --dport 6600 -j ACCEPT
 #####
 
--A INPUT -j LOG --log-level 4 --log-prefix "Dropped  "
+#INPUTLOG#-A INPUT -j LOG --log-level 4 --log-prefix "Dropped  "
 -A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
 -A INPUT -p tcp -j REJECT --reject-with tcp-reset
 -A INPUT -j REJECT --reject-with icmp-proto-unreachable

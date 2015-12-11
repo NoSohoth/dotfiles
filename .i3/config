@@ -65,8 +65,10 @@ bar {
 #system#
 ########
 bindcode 248 exec /usr/local/bin/lock
-bindsym XF86KbdBrightnessDown exec /usr/local/bin/kbd_backlight down
-bindsym XF86KbdBrightnessUp exec /usr/local/bin/kbd_backlight up
+#bindsym XF86KbdBrightnessDown exec /usr/local/bin/kbd_backlight down
+#bindsym XF86KbdBrightnessUp exec /usr/local/bin/kbd_backlight up
+bindsym $mod+F3 exec /usr/local/bin/kbd_backlight down
+bindsym $mod+F4 exec /usr/local/bin/kbd_backlight up
 bindsym $mod+F5 exec /usr/local/bin/scr_backlight down
 bindsym $mod+F6 exec /usr/local/bin/scr_backlight up
 bindsym $mod+F7 exec /usr/local/bin/scr_backlight toggle
@@ -174,17 +176,20 @@ bindsym $mod+r mode "resize"
 #-----------------------------------------------------------------------------#
 assign [class="URxvt" instance="ncmpcpp"] $ws1
 assign [class="URxvt" instance="poezio"] $ws2
+assign [class="URxvt" instance="irssi"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Thunderbird"] $ws10
 
-for_window [class="URxvt" instance="ncmpcpp"] floating enable, resize set 704 396, move absolute position 128 72
 for_window [class="URxvt" instance="htop"] floating enable, resize set 704 396, move absolute position 1088 612
-for_window [class="URxvt" instance="poezio"] floating enable, resize set 1728 972, move absolute position 96 60
+for_window [class="URxvt" instance="ncmpcpp"] floating enable, resize set 704 396, move absolute position 128 72
+for_window [class="URxvt" instance="poezio"] floating enable, resize set 885 972, move absolute position 50 60
+for_window [class="URxvt" instance="irssi"] floating enable, resize set 885 972, move absolute position 985 60
 
 exec urxvt -name htop -e htop
 exec urxvt -name ncmpcpp -e ncmpcpp
-exec urxvt -name poezio -e /home/maelstrom/Git/Python/poezio/launch.sh
-exec firefox
+exec urxvt -name poezio
+exec urxvt -name irssi -e irssi
+exec optirun firefox-nightly
 exec thunderbird
 
 # syntax coloring in vim

@@ -28,6 +28,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 export TERM=rxvt-unicode-256color
 export BROWSER="firefox"
+export USE_CCACHE=1
 export EDITOR="vim"
 export SUDO_EDITOR=rvim
 export SDCV_PAGER=/usr/bin/less
@@ -112,3 +113,9 @@ zstyle :compinstall filename '/home/maelstrom/.zshrc'
 # LS_COLORS
 #------------------------------
 eval $( dircolors -b /home/maelstrom/Git/zsh/LS_COLORS/LS_COLORS )
+
+###-tns-completion-start-###
+if [ -f /home/maelstrom/.tnsrc ]; then 
+    source /home/maelstrom/.tnsrc 
+fi
+###-tns-completion-end-###
