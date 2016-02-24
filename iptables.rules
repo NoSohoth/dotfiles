@@ -30,22 +30,25 @@
 
 ##### Ports to open
 # DHCP
--A TCP -p tcp --dport 67 -j ACCEPT
--A UDP -p udp --dport 67 -j ACCEPT
+#-A TCP -p tcp --dport 67 -j ACCEPT
+#-A UDP -p udp --dport 67 -j ACCEPT
 # HTTP
--A TCP -p tcp --dport 80 -j ACCEPT
+#-A TCP -p tcp --dport 80 -j ACCEPT
 # HTTPS
--A TCP -p tcp --dport 443 -j ACCEPT
+#-A TCP -p tcp --dport 443 -j ACCEPT
 # Tests
--A TCP -p tcp --dport 5555 -j ACCEPT
+#-A TCP -p tcp --dport 5555 -j ACCEPT
 # Borderlands 2
--A UDP -p udp --dport 14001 -j ACCEPT
--A UDP -p udp --dport 7777 -j ACCEPT
+#-A UDP -p udp --dport 14001 -j ACCEPT
+#-A UDP -p udp --dport 7777 -j ACCEPT
 # Mumble
--A TCP -p tcp --dport 64738 -j ACCEPT
--A UDP -p UDP --dport 64738 -j ACCEPT
+#-A TCP -p tcp --dport 64738 -j ACCEPT
+#-A UDP -p udp --dport 64738 -j ACCEPT
 # MPD
--A TCP -p tcp --dport 6600 -j ACCEPT
+-A TCP -p tcp -s 192.168.1.4 --dport 4875 -j ACCEPT
+-A TCP -p tcp -s 192.168.1.4 --dport 4876 -j ACCEPT
+-A TCP -p tcp -s 192.168.0.201 --dport 4875 -j ACCEPT
+-A TCP -p tcp -s 192.168.0.201 --dport 4876 -j ACCEPT
 #####
 
 #INPUTLOG#-A INPUT -j LOG --log-level 4 --log-prefix "Dropped  "

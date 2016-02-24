@@ -9,7 +9,7 @@
 #
 mpd_host = "localhost"
 #
-mpd_port = "6600"
+mpd_port = "4875"
 #
 mpd_music_dir = "/data/maelstrom/Music"
 #

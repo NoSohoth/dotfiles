@@ -77,10 +77,10 @@ bindsym $mod+F9 exec killall redshift && redshift -x
 bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2-
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2+
-bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-bindsym XF86AudioPrev exec --no-startup-id mpc prev
-bindsym XF86AudioNext exec --no-startup-id mpc next
-bindsym XF86AudioStop exec --no-startup-id mpc stop
+bindsym XF86AudioPlay exec --no-startup-id mpc -p 4875 toggle
+bindsym XF86AudioPrev exec --no-startup-id mpc -p 4875 prev
+bindsym XF86AudioNext exec --no-startup-id mpc -p 4875 next
+bindsym XF86AudioStop exec --no-startup-id mpc -p 4875 stop
 #bindsym XF86Standby
 #bindsym XF86Calculator
 #bindsym XF86Webcam
@@ -180,8 +180,8 @@ assign [class="URxvt" instance="irssi"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Thunderbird"] $ws10
 
-for_window [class="URxvt" instance="htop"] floating enable, resize set 704 396, move absolute position 1088 612
-for_window [class="URxvt" instance="ncmpcpp"] floating enable, resize set 704 396, move absolute position 128 72
+for_window [class="URxvt" instance="htop"] floating enable, resize set 768 432, move absolute position 1024 576
+for_window [class="URxvt" instance="ncmpcpp"] floating enable, resize set 768 432, move absolute position 128 72
 for_window [class="URxvt" instance="poezio"] floating enable, resize set 885 972, move absolute position 50 60
 for_window [class="URxvt" instance="irssi"] floating enable, resize set 885 972, move absolute position 985 60
 
@@ -189,7 +189,7 @@ exec urxvt -name htop -e htop
 exec urxvt -name ncmpcpp -e ncmpcpp
 exec urxvt -name poezio
 exec urxvt -name irssi -e irssi
-exec optirun firefox-nightly
+exec firefox-nightly
 exec thunderbird
 
 # syntax coloring in vim
