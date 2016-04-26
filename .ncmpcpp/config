@@ -23,8 +23,12 @@ mpd_crossfade_time = "0"
 ## order to handle utf8 encoded strings properly.
 ##
 #
-#visualizer_type = "wave" (spectrum/wave)
-#visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "My FIFO"
+visualizer_sync_interval = "10"
+visualizer_in_stereo = "no"
+visualizer_look = "+|"
 #
 #system_encoding = ""
 #
@@ -45,7 +49,7 @@ mpd_crossfade_time = "0"
 #############################################
 
 # Playlist
-song_columns_list_format = "(7f)[blue]{l} (23)[red]{a} (50)[green]{t|f} (20)[yellow]{b}"
+song_columns_list_format = "(7f)[blue]{l} (23)[red]{a} (42)[green]{t|f} (23)[yellow]{b} (5)[red]{g}"
 now_playing_prefix = "$b$5»$7»$1»   "
 now_playing_suffix = "$/b"
 playlist_display_mode = "columns" (classic/columns)

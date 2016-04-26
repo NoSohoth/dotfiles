@@ -76,7 +76,7 @@ URxvt*cursorColor:      #6666CC
 URxvt*colorBD:          #C8B984
 
 
-URxvt*color0:           #392925
+URxvt*color0:           #65731F
 URxvt*color8:           #544B2E
 
 URxvt*color1:           #98724C
@@ -144,7 +144,7 @@ URxvt*boldFont:                         6x13bold
 ! URxvt*secondaryScroll:                boolean
 ! URxvt*perl-lib:                       string
 ! URxvt*perl-eval:                      perl-eval
-URxvt*perl-ext-common:                	default,matcher,vtwheel,clipboard
+URxvt*perl-ext-common:                	default,matcher,vtwheel
 ! URxvt*perl-ext:                       string
 URxvt*iso14755:                       	false
 URxvt*iso14755_52:						false
@@ -171,13 +171,11 @@ URxvt*matcher.button:                 	1
 ! URxvt*tab-fg:                         colour
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
-URxvt*url-launcher:                   	/usr/bin/firefox-nightly
+URxvt*url-launcher:                   	/home/maelstrom/Scripts/firefox
 
 
 ! Key bindings
 
-URxvt.keysym.Shift-Control-C:			perl:clipboard:copy
-URxvt.keysym.Shift-Control-V:			perl:clipboard:paste
 URxvt.keysym.C-Up:						font-size:increase
 URxvt.keysym.C-Down:					font-size:decrease
 URxvt.keysym.C-KP_0:                    font-size:reset
