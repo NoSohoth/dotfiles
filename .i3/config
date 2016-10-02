@@ -41,7 +41,7 @@ client.background       #ffffff
 #                                  i3status
 #-----------------------------------------------------------------------------#
 bar {
-    status_command i3status -c /home/maelstrom/.i3/i3status.conf
+    status_command i3status -c /home/maelstrom/.i3/i3status.conf | php -f /usr/local/bin/i3statusphp
 	position top
 	font pango:cure 9
     colors {
@@ -74,9 +74,9 @@ bindsym $mod+F6 exec /usr/local/bin/scr_backlight up
 bindsym $mod+F7 exec /usr/local/bin/scr_backlight toggle
 bindsym $mod+F8 exec redshift
 bindsym $mod+F9 exec killall redshift && redshift -x
-bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2+
+bindsym XF86AudioMute exec pamixer -t
+bindsym XF86AudioLowerVolume exec pamixer --allow-boost -d 2
+bindsym XF86AudioRaiseVolume exec pamixer --allow-boost -i 2
 bindsym XF86AudioPlay exec --no-startup-id mpc -p 4875 toggle
 bindsym XF86AudioPrev exec --no-startup-id mpc -p 4875 prev
 bindsym XF86AudioNext exec --no-startup-id mpc -p 4875 next
@@ -187,9 +187,9 @@ for_window [class="URxvt" instance="poezio"] floating enable, resize set 885 972
 for_window [class="URxvt" instance="htop"] floating enable, resize set 885 972, move absolute position 985 60
 
 exec urxvt -name ncmpcpp -e ncmpcpp
-exec urxvt -name cava -e cava
+exec urxvt -name cava -e /home/maelstrom/Scripts/mpdInit
 exec urxvt -name poezio
-exec urxvt -name htop -e htop
+exec urxvt -name htop -e htop -d 5
 exec /home/maelstrom/Scripts/firefox
 exec thunderbird
 
