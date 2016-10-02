@@ -53,13 +53,9 @@ let g:rehash256 = 1
 "autocmd BufEnter * set noexpandtab
 "autocmd BufEnter *.py set expandtab
 
-autocmd BufEnter *.py,*.c,*.h,*.cpp,*.hpp,*.java set colorcolumn=80
+autocmd BufEnter *.py,*.c,*.h,*.cpp,*.hpp,*.java,*.tex set colorcolumn=81
 
 " -- Key Mapping
 
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
-
-" -- Add-Ons
-
-let g:ycm_global_ycm_extra_conf = '/home/maelstrom/.ycm_extra_conf.py'
