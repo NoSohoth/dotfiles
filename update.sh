@@ -3,4 +3,4 @@ cp ~/.vim/vimrc ~/Git/dotfiles/.vimrc
 cp ~/.ncmpcpp/config ~/Git/dotfiles/.ncmpcpp/
 cp ~/.config/redshift.conf ~/Git/dotfiles/.config
 cp ~/.config/mpd/mpd.conf ~/Git/dotfiles/.config/mpd
-sudo cp /etc/iptables/iptables.rules /etc/mpv/mpv.conf ~/Git/dotfiles/
+sudo cp /etc/mpv/mpv.conf ~/Git/dotfiles/
